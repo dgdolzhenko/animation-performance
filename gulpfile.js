@@ -40,6 +40,15 @@ gulp.task('prepare', () => {
             path.dirname = 'shower/' + path.dirname;
         }));
 
+    const styles = gulp.src([
+            'styles.css'
+        ], {
+            cwd: 'styles'
+        })
+        .pipe(rename( (path) => {
+            path.dirname = 'styles/' + path.dirname;
+        }));
+
     const material = gulp.src([
             '**', '!package.json'
         ], {
@@ -64,7 +73,7 @@ gulp.task('prepare', () => {
             '$1../../$3', { skipBinary: true }
         ));
 
-    return merge(shower, core, themes)
+    return merge(shower, core, styles, themes)
         .pipe(gulp.dest('prepared'));
 
 });
