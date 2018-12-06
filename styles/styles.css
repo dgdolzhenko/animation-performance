@@ -1,0 +1,61 @@
+:root {
+  --color-text: #000;
+  --color-title: #4caf50;
+}
+
+.shower {
+  font-size: 32px;
+  color: var(--color-text);
+}
+
+.slide h2 {
+  color: var(--color-title);
+  font-weight: 600;
+}
+
+.slide p {
+  color: var(--color-text);
+}
+
+.slide blockquote {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.slide .shout {
+  font-size: 78px;
+}
+
+.slide::after {
+  left: auto;
+  right: 38px;
+  color: var(--color-text);
+}
+
+.angle {
+  position: relative;
+}
+
+.angle::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 100%;
+  width: 15%;
+  background: rgba(0, 0, 0, 0.1);
+  transform: skewX(-45deg);
+  transform-origin: bottom;
+}
+
+.slide .video-name {
+  margin-top: 40px;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.green {
+  margin-top: 0 !important;
+  color: var(--color-title) !important;
+}

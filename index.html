@@ -1,210 +1,389 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <title>Shower Presentation Engine</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
         }
     </style>
 </head>
-<body class="shower list">
+<body class="shower full">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Производительность анимаций. Как не застрять в кадрах.</h1>
+        <p>Долженко Дмитрий</p>
     </header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
+    <section id="title-slide" class="slide clear">
+        <h2>Производительность анимаций.<br>Как не застрять в кадрах.</h2>
+        <br>
+        <br>
+        <p><i>Долженко Дмитрий</i></p>
+        <img src="pictures/tape.jpg" alt="" class="cover w">
+
         <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
+            #title-slide { 
+                padding: 135px 200px 100px;
             }
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
+            #title-slide h2 {
+                color: #fff;
+                font-weight: 600;
+            }
+            
+            #title-slide i { 
+                color: #fff;
+                font-size: 25px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">С чего начать?</h2>
+    </section>
+
+    <section class="slide angle">
+        <h2>Виды анимации:</h2>
+        <ol>
+            <li>Предсказуемые анимации.</li>
+            <li class="next">Зависимые анимации.</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Нужно больше видов</h2>
+    </section>
+
+    <section class="slide angle">
+        <h2>Виды анимаций по контенту:</h2>
+        <ol>
+            <li>Фоновая анимация.</li>
+            <li class="next">Контентная анимация.</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Что насчет реализации?</h2>
+    </section>
+
+    <section class="slide angle">
+        <h2>CSS</h2>
+        <ul>
+            <li>Transition</li>
+            <li class="next">Animation</li>
+        </ul>
+    </section>
+
+    <section class="slide angle">
+        <h2>JavaScript</h2>
+        <ul>
+            <li>Изменение стилей</li>
+            <li class="next">Canvas 2D context</li>
+            <li class="next">WebGL (canvas 3D context)</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">DevTools</h2>
+    </section>
+
+    <section class="slide angle">
+        <p class="place top left video-name">Вкладка Animation</p>
+        <video class="cover" src="videos/animation-tools.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide black">
+        <img src="pictures/wanted-poster.jpg" alt="" class="cover h">
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Так во всех браузерах?</h2>
+    </section>
+
+    <section class="slide angle">
+        <h2>Дисклеймер</h2>
+        <blockquote>
+            Вся информация по инструментам разработчика касается только Google Chrome, данный доклад не спонсируется Google Inc. и не несет целью обидеть другие браузеры. Просьба не воспринимать услышанное близко к сердцу и не устраивать холиваров.
+        </blockquote>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Render! Render! Render!</h2>
+    </section>
+
+    <section class="slide angle">
+        <h2>Затратные операции браузера:</h2>
+        <ol>
+            <li>Reflow</li>
+            <li class="next">Repaint</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Не все css-свойства одинаково полезны</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Немного хитрости</h2>
+    </section>
+
+    <section class="slide angle">
+        <ul>
+            <li>will-change</li>
+            <li class="next">Композитные слои</li>
+            <li class="next">Абсолютное позиционирование</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Canvas здесь ни при чем</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Как измерить производительность?</h2>
+    </section>
+
+    <section class="slide angle">
+        <p class="place top left video-name">Rendering Tools</p>
+        <video class="cover" src="videos/rendering-tools.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place top left video-name">Layers Tools</p>
+        <video class="cover" src="videos/layers-tools.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place top left video-name">Performance Tools</p>
+        <video class="cover" src="videos/performance-tools.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Особенный Paint</h2>
+    </section>
+
+    <section class="slide angle">
+        <p class="place top left video-name">Performance Tools (Paint)</p>
+        <video class="cover" src="videos/performance-tools-paint.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Резюмируем</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Сравним производительность</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Pure CSS </h2>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">Pure CSS (1 эл.)</p>
+        <video class="cover" src="videos/css-1.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">Pure CSS (10 эл.)</p>
+        <video class="cover" src="videos/css-10.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">Pure CSS (100 эл.)</p>
+        <video class="cover" src="videos/css-100.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">Pure CSS (1000 эл.)</p>
+        <video class="cover" src="videos/css-1000.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <h2>Pure CSS: резюме</h2>
+        <table>
+            <tr>
+                <th>1 эл.</th>
+                <th>10 эл.</th>
+                <th>100 эл.</th>
+                <th>1000 эл.</th>
+            </tr>
+            <tr>
+                <td>~ 60 fps</td>
+                <td>~ 60 fps</td>
+                <td>~ 60 fps</td>
+                <td>~ 20 fps</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">CSS + JS</h2>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">CSS + JS (1 эл.)</p>
+        <video class="cover" src="videos/js-1.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">CSS + JS (10 эл.)</p>
+        <video class="cover" src="videos/js-10.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">CSS + JS (100 эл.)</p>
+        <video class="cover" src="videos/js-100.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">CSS + JS (1000 эл.)</p>
+        <video class="cover" src="videos/js-1000.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <h2>CSS + JS: резюме</h2>
+        <table>
+            <tr>
+                <th>1 эл.</th>
+                <th>10 эл.</th>
+                <th>100 эл.</th>
+                <th>1000 эл.</th>
+            </tr>
+            <tr>
+                <td>~ 60 fps</td>
+                <td>~ 60 fps</td>
+                <td>~ 35-40 fps</td>
+                <td>~ 10 fps</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">JS Canvas</h2>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">JS Canvas (1 эл.)</p>
+        <video class="cover" src="videos/canvas-1.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">JS Canvas (10 эл.)</p>
+        <video class="cover" src="videos/canvas-10.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">JS Canvas (100 эл.)</p>
+        <video class="cover" src="videos/canvas-100.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <p class="place bottom left video-name green">JS Canvas (1000 эл.)</p>
+        <video class="cover" src="videos/canvas-1000.mp4" autoplay loop muted></video>
+    </section>
+
+    <section class="slide angle">
+        <h2>JS Canvas: резюме</h2>
+        <table>
+            <tr>
+                <th>1 эл.</th>
+                <th>10 эл.</th>
+                <th>100 эл.</th>
+                <th>1000 эл.</th>
+            </tr>
+            <tr>
+                <td>~ 55-60 fps</td>
+                <td>~ 55-60 fps</td>
+                <td>~ 42-44 fps</td>
+                <td>~ 26 fps</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Что дальше?</h2>
+    </section>
+
+    <section class="slide angle">
+        <h2>Критерии выбора подхода</h2>
+        <ol>
+            <li>Независимость или предсказуемость анимации.</li>
+            <li class="next">Полезность анимируемого контента.</li>
+            <li class="next">Количество анимируемых элементов.</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Подведем итоги</h2>
+    </section>
+
+    <section class="slide angle">
+        <h2>Производительность</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>Pure CSS</th>
+                <th>CSS + JS</th>
+                <th>JS Canvas</th>
+            </tr>
+            <tr>
+                <td>1 эл.</td>
+                <td>~ 60 fps</td>
+                <td>~ 60 fps</td>
+                <td>~ 55-60 fps</td>
+            </tr>
+            <tr>
+                <td>10 эл.</td>
+                <td>~ 60 fps</td>
+                <td>~ 60 fps</td>
+                <td>~ 55-60 fps</td>
+            </tr>
+            <tr>
+                <td>100 эл.</td>
+                <td>~ 60 fps</td>
+                <td>~ 35-40 fps</td>
+                <td>~ 42-44 fps</td>
+            </tr>
+            <tr>
+                <td>1000 эл.</td>
+                <td>~ 20 fps</td>
+                <td>~ 10 fps</td>
+                <td>~ 26 fps</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide angle">
+        <h2>Выводы</h2>
+        <ol id="infers">
+            <li class="next">Для сложных анимаций иногда приходится включать голову.</li>
+            <li class="next">Определяйте, ЧТО вы анимируете и зачем.</li>
+            <li class="next">Выбирайте подход, исходя из этого.</li>
+            <li class="next">Исследуйте производительность своей анимации и не бойтесь экспериментировать, меняя подходы и реализации.</li>
+            <li class="next">Используйте те возможности web, которые позволят выполнить работу качественнее, а не те, которые вам больше нравятся.</li>
+            <li class="next">Уделите немного времени производительности и никто не застрянет в вашей анимации.</li>
+        </ol>
+
+        <style>
+            #infers {
                 font-size: 20px;
             }
-
-            #cover p a {
-                color: white;
-            }
         </style>
     </section>
 
-    <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+    <section class="slide clear">
+        <h2 class="shout">Спасибо за внимание!</h2>
     </section>
-
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
-    </section>
-
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
-
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
-
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
-
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
-
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
-
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
-
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
 
     <div class="progress"></div>
 
     <script src="shower/shower.min.js"></script>
-    <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
 
 </body>
 </html>
